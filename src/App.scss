@@ -1,0 +1,264 @@
+@import './scss/init.scss';
+
+/*Nav.jsx*/
+.nav{
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+  background-color: beige;  /*영역 확인용*/
+  .inner{
+    .menu{
+      display: flex;
+      justify-content: center;
+      li{
+        a{
+          padding: 10px 20px;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+/*-------------------------------------------------*/
+/*Home.jsx*/
+.home{
+  margin-top: 50px;
+  .swiperMain{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title{
+    margin-top: 20px;
+    h2{
+      text-align: center;
+      color: #333;
+      font-size: 24px;
+      font-weight: 500  ;
+    }
+  }
+  .homeList{
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    .list{
+      .item{
+        width: 100%;
+      }
+    }
+  }
+  .swiper_btn{
+    .swiperPrevBtn{
+      position: absolute;
+      top: 40%;
+      left: 15px;
+      font-size: 22px;
+      z-index: 100;
+    }
+    .swiperNextBtn{
+      position: absolute;
+      top: 40%;
+      right: 15px;
+      font-size: 22px;
+      z-index: 100;
+    }
+  }
+}
+/*-------------------------------------------------*/
+/*List.jsx*/
+.list{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  .item{
+    width: 25%;
+    padding: 10px;
+    a{
+      .item-img{  /*이미지 */
+        max-height: 300px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .list-text-wrap{
+        padding: 20px 0;
+        .list-txt-title{  /*메뉴명 */
+          font-size: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .list-sub-txt-wrap{
+          margin-top: 10px;
+          .list-txt-kal{  /*열량(칼로리) */
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+
+            .kalIcon{
+              color: rgb(0, 75, 0);
+              margin-right: 8px;
+              font-size: 12px;
+            }
+          }
+          .list-txt-way{  /*조리방법 */
+            color: #666;
+            font-size: 13px;
+            
+            .cookIcon{
+              color: rgb(0, 75, 0);
+              margin-right: 8px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*-------------------------------------------------*/
+/*category.jsx*/
+.category{
+  padding: 20px;
+  h2{
+    text-align: center;
+    font-size: 24px;
+  }
+}
+/*-------------------------------------------------*/
+/*Recipe.jsx*/
+.recipeDetail{
+  width: 50vw;
+  padding: 2vw;
+  margin: 2rem auto 20rem;
+  @include media ('sm') {
+    width: 40rem;
+  }
+  >img{
+    width: 100%;
+    object-fit: contain;
+  }
+  .recipeDetailTitle{
+    margin: 20px auto;
+    text-align: center;
+    color: #666;
+    font-size: 2rem;
+  }
+
+  .recipeDetailInfo{
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    .info-title{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 30px;
+      &::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 20px;
+        height:20px;
+        background:#f00;
+      }
+     
+    }
+    >.txt{
+      font-size:.9rem;
+      line-height: 1.3;
+      .source-tit{display: block; margin-bottom: 10px;}
+      .source-con{ color: #666}
+    }
+  }
+  .recipeDetailInfo1{
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    .info-title1{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 30px;
+      &::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 20px;
+        height:20px;
+        background:#f00;
+      }
+     
+    }
+    .desc_list{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto;
+      margin-bottom: 1rem;
+      grid-column-gap: 10px;
+      .desc-txt{
+        font-size:.9rem;
+        line-height: 1.3;
+        color: #666;
+      }
+      img{}
+    }
+  }
+  .recipeDetailInfo2{
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    .info-title2{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 30px;
+      &::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 20px;
+        height:20px;
+        background:#f00;
+      }
+    }
+    .table{
+      display: flex;
+      flex-direction: column;
+      color: #666;
+      justify-content: center;
+      .row{
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-direction: row;
+        height: 2rem;
+        .col{
+          &:first-child{
+            width: 5rem;
+            display: inline-block;
+            text-align: justify;
+            max-width: 20rem;
+            min-width:10%;
+          }
+        }
+      }
+      .tip{
+        font-weight: 700;
+        margin-top: 2rem;
+        color: #777;
+        font-size: .9rem;
+      }
+    }
+  }
+}

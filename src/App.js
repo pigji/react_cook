@@ -4,6 +4,8 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Recipe from './pages/Recipe';
 import Category from './pages/Category';
+import Nav from './conponents/Nav';
+import './App.scss';
 
 const DataContext=createContext();
 
@@ -17,7 +19,7 @@ function App({children}) {
   const getDB = async () => {
     //5fb884d2378843fcbf4a	
     try{
-      const {data}= await axios.get(`http://openapi.foodsafetykorea.go.kr/api/${APIKEY}/COOKRCP01/json/1/30`);
+      const {data}= await axios.get(`http://openapi.foodsafetykorea.go.kr/api/${APIKEY}/COOKRCP01/json/1/100`);
       setData( data.COOKRCP01.row)
       console.log(data)
     }catch(err){
@@ -31,10 +33,11 @@ function App({children}) {
 
   return (
     <DataContext.Provider value={{data, loading}}>
+      <Nav />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/recipe" element={<Recipe />} />
-      <Route path="/category" element={<Category />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="/category/:category" element={<Category />} />
     </Routes>
     </DataContext.Provider>
   );
