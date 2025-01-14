@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_cook/static/css/main.cedec856.css",
+    "main.js": "/react_cook/static/js/main.34cc9b52.js",
+    "index.html": "/react_cook/index.html",
+    "main.cedec856.css.map": "/react_cook/static/css/main.cedec856.css.map",
+    "main.34cc9b52.js.map": "/react_cook/static/js/main.34cc9b52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cedec856.css",
+    "static/js/main.34cc9b52.js"
+  ]
+}
